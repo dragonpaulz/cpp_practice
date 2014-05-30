@@ -4,14 +4,7 @@ void unorderedMapPractice();
 
 void printLinkedList(std::list<void>);
 
-void stackPractice();
-void stackChap1();
-void stackChap2();
-void stackChap3();
-void stackChap4();
-void stackChap5();
-void stackChap6();
-void stackChap7();
+
 
 void treePractice();
 void treeChap1();
