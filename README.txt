@@ -1,0 +1,3 @@
+These are the sample interview questions from the book "Cracking the Coding Interview", fifth edition. The answers in the back are written in Java, but I was interested in using C++. I written my answers on paper, then transcribed them into visual studio. I sometimes find that the Java solution is better, and I write a new function with 'Better' appended to the function's name.
+
+There's a main function in the file cpp_practice.cpp, which contains a large case statement which may perform any of the questions from the book.
