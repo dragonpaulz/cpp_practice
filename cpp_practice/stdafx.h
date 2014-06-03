@@ -41,3 +41,13 @@
 #define STD_TCHAR_H_
 #include<tchar.h>
 #endif
+
+#ifndef STD_ALGORITHM_
+#define STD_ALGORITHM_
+#include <algorithm>
+#endif
+
+#ifndef STD_VECTOR_
+#define STD_VECTOR_
+#include <vector>
+#endif

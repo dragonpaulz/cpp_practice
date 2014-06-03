@@ -36,7 +36,7 @@ template<class T>
 class Stack
 {
 public:
-	Node* top = nullptr;
+	Node<T>* top = nullptr;
 
 	T pop()
 	{

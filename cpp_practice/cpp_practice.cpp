@@ -5,7 +5,7 @@
 
 #include "stdafx.cpp"
 
-problemSet problem = array2;
+problemSet problem = array3;
 
 void unorderedMapPractice()
 {
@@ -36,26 +36,41 @@ int main(int argc, char* argv[])
 	case(linkedlist):
 		linkedListPractice();
 		break;
-	case(array1):
-		if(arrayChap1Better("tt"))
-			std::cout << "true" << std::endl;
+
+	case(array1) :
+		informUser(arrayChap1Better("tt"));
 		break;
+
 	case(array2):
 		reverse("Paul");
+		break;
+
+	case(array3) :
+		informUser(arrayChap3("cat", "tca"));
+		break;
+
 	case(linkedlist1):
 		std::list<int> linkedlistChap1(std::list<int> original_list);
 		break;
+
 	default:
 		unorderedMapPractice();
 	}
-	if (arrayChap1Better("tt"))
-		std::cout << "true" << std::endl;
-	else
-		std::cout << "false" << std::endl;
 
-	unorderedMapPractice();
+	//unorderedMapPractice();
 
 
 	return 0;
 }
 
+void informUser(bool result)
+{
+	if (result)
+	{
+		std::cout << "The result is true" << std::endl;
+	}
+	else
+	{
+		std::cout << "The result is false" << std::endl;
+	}
+}

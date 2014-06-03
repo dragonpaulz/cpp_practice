@@ -85,3 +85,13 @@ void reverse(char* str)
 	}
 	return;
 }
+
+bool arrayChap3(std::string s1, std::string s2)
+{
+	
+	// sort the string
+	std::sort(s1.begin(), s1.end());
+	std::sort(s2.begin(), s2.end());
+
+	return s1 == s2;
+}
