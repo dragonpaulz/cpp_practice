@@ -4,7 +4,7 @@ void unorderedMapPractice();
 
 void printLinkedList(std::list<void>);
 
-bool informUser(bool);
+void informUser(bool);
 
 
 
