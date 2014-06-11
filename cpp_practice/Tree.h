@@ -1,3 +1,8 @@
+#ifndef CPP_PRACTICE_NODE_H_
+#define CPP_PRACTICE_NODE_H_
+#include "Node.h"
+#endif
+
 void treePractice();
 void treeChap1();
 void treeChap2();

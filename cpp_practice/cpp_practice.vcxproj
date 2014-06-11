@@ -81,6 +81,7 @@
     <ClInclude Include="array.h" />
     <ClInclude Include="cpp_practice.h" />
     <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="Node.h" />
     <ClInclude Include="StacksQueues.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -90,6 +91,7 @@
     <ClCompile Include="array.cpp" />
     <ClCompile Include="cpp_practice.cpp" />
     <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="Node.cpp" />
     <ClCompile Include="StacksQueues.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

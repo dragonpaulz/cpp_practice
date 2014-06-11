@@ -1,3 +1,8 @@
+#ifndef CPP_PRACTICE_NODE_H_
+#define CPP_PRACTICE_NODE_H_
+#include "Node.h"
+#endif
+
 void stackPractice();
 void stackChap1();
 void stackChap2();
@@ -7,7 +12,8 @@ void stackChap5();
 void stackChap6();
 void stackChap7();
 
-template<class T>
+
+/*template<class T>
 class Node
 {
 public:
@@ -24,7 +30,8 @@ public:
 	{
 		value = val;
 	}
-};
+};*/
+
 
 /******************************************************************************
 * class Stack
@@ -32,11 +39,12 @@ public:
 *	A class to perform a 'Last in, first out' (LIFO) data structure.
 ******************************************************************************/
 
-template<class T>
+template<typename T>
 class Stack
 {
+	Node <T> *tem;
 public:
-	Node<T>* top = nullptr;
+	Node<T> *top;
 
 	T pop()
 	{
@@ -65,7 +73,7 @@ public:
 
 	Stack()
 	{
-
+		top = nullptr;
 	}
 };
 
@@ -75,11 +83,11 @@ public:
 * 
 *	A class to perform a 'First in, first out' (FIFO) data structure.
 ******************************************************************************/
-template <class T>
+template <typename T>
 class Queue
 {
 private:
-	Node *top = nullptr;
+	Node<T> *top = nullptr;
 
 public:
 	void enqueue(T addObject)
