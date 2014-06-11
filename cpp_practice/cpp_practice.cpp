@@ -5,7 +5,7 @@
 
 #include "stdafx.cpp"
 
-problemSet problem = array3;
+problemSet problem = tree;
 
 void unorderedMapPractice()
 {
@@ -51,6 +51,10 @@ int main(int argc, char* argv[])
 
 	case(linkedlist1):
 		std::list<int> linkedlistChap1(std::list<int> original_list);
+		break;
+
+	case(tree) :
+		paulTree::treePractice();
 		break;
 
 	default:

@@ -16,12 +16,16 @@
 #include "cpp_practice.h"
 #endif
 
+#ifndef CPP_PRACTICE_TREE_H_
+#define CPP_PRACTICE_TREE_H_
+#include "Tree.h"
+#endif 
 
-/*#ifndef CPP_PRACTICE_LINKLIST_H_
+
+#ifndef CPP_PRACTICE_LINKLIST_H_
 #define CPP_PRACTICE_LINKLIST_H_
-#include "LinkedList.cpp"
-#endif*/
-
+#include "LinkedList.h"
+#endif
 
 // TODO: reference any additional headers you need in STDAFX.H
 // and not in this file

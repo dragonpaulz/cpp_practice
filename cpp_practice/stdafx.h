@@ -52,3 +52,8 @@
 #define STD_VECTOR_
 #include <vector>
 #endif
+
+#ifndef STD_MAP_
+#define STD_MAP_
+#include <map>
+#endif

@@ -1,5 +1,11 @@
-﻿Build started 10/06/2014 10:56:26 PM.
+﻿Build started 11/06/2014 1:07:48 PM.
+     1>Project "C:\Users\Paul\Programming\cpp_practice\cpp_practice\cpp_practice.vcxproj" on node 2 (ClCompile target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Tree.cpp
+         Skipping... (no relevant changes detected)
+         Tree.cpp
+     1>Done Building Project "C:\Users\Paul\Programming\cpp_practice\cpp_practice\cpp_practice.vcxproj" (ClCompile target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.06
+Time Elapsed 00:00:00.28
