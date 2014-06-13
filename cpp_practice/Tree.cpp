@@ -5,7 +5,8 @@
 // std::map used to answer these questions as it is an implementation of 
 // red-black trees.
 
-void paulTree::treePractice()
+template<typename Object>
+static void BinaryTree<Object>::treePractice()
 {
 	std::map<std::string, int> studentMarks;
 
@@ -15,3 +16,4 @@ void paulTree::treePractice()
 
 	std::cout << studentMarks.at("Paul") << std::endl;
 }
+

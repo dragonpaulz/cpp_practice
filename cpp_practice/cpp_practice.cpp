@@ -54,7 +54,8 @@ int main(int argc, char* argv[])
 		break;
 
 	case(tree) :
-		paulTree::treePractice();
+		// next line causing problems:
+		//BinaryTree<int>::treePractice();
 		break;
 
 	default:

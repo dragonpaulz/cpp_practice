@@ -7,35 +7,38 @@
 
 
 
-template<typename KeyObject, typename ValueObject>
+template<typename Object>
 class TreeNode{
 protected:
-	KeyObject key;
-	ValueObject value;
+	Object value;
 	TreeNode *left = nullptr;
 	TreeNode *right = nullptr;
 
+	template<typename Object>
 	friend class BinaryTree;
 
-	TreeNode(KeyObject k, ValueObject v)
+	TreeNode(Object v)
 	{
-		
-		key = k;
 		value = v;
 	}
 public:
-	ValueObject getValue()
+	Object getValue()
 	{
 		return value;
 	}
 
+	TreeNode* getLeft()
+	{
+		return left;
+	}
+
+	TreeNode* getRight()
+	{
+		return right;
+	}
+
 };
 
-class paulTree{
-public:
-
-	static void paulTree::treePractice();
-};
 
 
 void treeChap1();
@@ -48,18 +51,23 @@ void treeChap7();
 void treeChap8();
 void treeChap9();
 
-/*
-template<typename KeyObject, typename ValueObject>
+/* ****************************************************************************
+* class BinaryTree
+*
+*	A class to make a binary search tree.
+* ****************************************************************************/
+
+template<typename Object>
 class BinaryTree
 {
 private:
-	TreeNode<KeyObject, ValueObject> *root = nullptr;
+	TreeNode<Object> *root = nullptr;
 
 
 	// rebalancing function
 	void balanceTree();
 public:
-	void addValue(KeyObject k, ValueObject v)
+	void addValue(Object v)
 	{
 		if (root == nullptr)
 		{
@@ -72,4 +80,6 @@ public:
 
 		}
 	}
-};*/
+
+	static void treePractice();
+};
