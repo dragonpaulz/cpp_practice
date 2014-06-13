@@ -81,5 +81,23 @@ public:
 		}
 	}
 
+	std::list<Object> BFSList()
+	{
+		std::list<Object> * nodesInOrder = new std::list<T>;
+		if (root != nullptr)
+		{
+			std::list<Object>::iterator nodesInOrderItr = nodesInOrder.begin();
+			nodesInOrder.push_back(*root);
+			while (nodesInOrderItr != nodesInOrder.end())
+			{
+				if (nodesInOrder->left != nullptr)
+					nodesInOrder.push_back(nodesInOrder->left);
+				if (nodesInOrder->right != nullptr)
+					nodesInOrder.push_back(nodesInOrder->right);
+			}
+		}
+		return nodesInOrder;
+	}
+
 	static void treePractice();
 };
