@@ -64,3 +64,22 @@ int betterLinkedlistChap2(std::list<int> inputList, int k)
 	}
 	return *behind;//don't forget to put the reference to the element
 }
+
+/* ****************************************************************************
+* void std::list<Object>::printList()
+*
+*	output:
+*		prints to the screen the contents of a list
+* ****************************************************************************/
+
+/*template<typename Object>
+void std::list<Object>::printList()
+{
+	std::list<Object>::iterator throughList = this.cbegin();
+	while (throughList != this.cend())
+	{
+		std::cout << *throughList << " ";
+		throughList++;
+	}
+	std::cout << std::endl;
+}*/

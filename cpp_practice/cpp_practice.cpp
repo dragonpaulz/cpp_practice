@@ -56,6 +56,12 @@ int main(int argc, char* argv[])
 	case(tree) :
 		// next line causing problems:
 		//BinaryTree<int>::treePractice();
+
+		BinaryTree<int>* pTree = new BinaryTree<int>();
+		pTree->addValue(3);
+		pTree->addValue(2);
+		pTree->addValue(1);
+		pTree->BFSList();
 		break;
 
 	default:
