@@ -71,11 +71,11 @@ public:
 	{
 		if (root == nullptr)
 		{
-			root = new TreeNode<KeyObject, ValueObject>(v);
+			root = new TreeNode<Object>(v);
 			return;
 		}
-		TreeNode<KeyObject, ValueObject> *currentNode = root;
-		if (currentNode->key <= k)
+		TreeNode<Object> *currentNode = root;
+		if (currentNode->value <= v)
 		{
 
 		}
@@ -83,10 +83,10 @@ public:
 
 	std::list<Object> BFSList()
 	{
-		std::list<Object> * nodesInOrder = new std::list<T>;
+		std::list<Object> * nodesInOrder = new std::list<Object>;
 		if (root != nullptr)
 		{
-			std::list<Object>::iterator nodesInOrderItr = nodesInOrder.begin();
+			std::list<Object>*::iterator nodesInOrderItr = nodesInOrder.begin();
 			nodesInOrder.push_back(*root);
 			while (nodesInOrderItr != nodesInOrder.end())
 			{

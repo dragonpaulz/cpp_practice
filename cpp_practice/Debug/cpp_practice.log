@@ -1,15 +1,55 @@
-﻿Build started 13/06/2014 8:42:08 AM.
-     1>Project "C:\Users\Paul\Programming\cpp_practice\cpp_practice\cpp_practice.vcxproj" on node 2 (Build target(s)).
+﻿Build started 14/06/2014 5:29:03 PM.
+     1>Project "C:\Users\Paul\Programming\cpp_practice\cpp_practice\cpp_practice.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt LinkedList.cpp cpp_practice.cpp
-         cpp_practice.cpp
-     1>c:\users\paul\programming\cpp_practice\cpp_practice\cpp_practice.cpp(67): error C2361: initialization of 'pTree' is skipped by 'default' label
-                 c:\users\paul\programming\cpp_practice\cpp_practice\cpp_practice.cpp(60) : see declaration of 'pTree'
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\cpp_practice.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt array.cpp cpp_practice.cpp LinkedList.cpp Node.cpp StacksQueues.cpp Tree.cpp
+         Tree.cpp
+         StacksQueues.cpp
+         Node.cpp
          LinkedList.cpp
-     1>c:\users\paul\programming\cpp_practice\cpp_practice\linkedlist.cpp(85): error C2039: 'printList' : is not a member of 'std::list<Object,std::allocator<_Ty>>'
+         cpp_practice.cpp
+     1>c:\users\paul\programming\cpp_practice\cpp_practice\tree.h(89): error C2039: 'iterator' : is not a member of '`global namespace''
+                 c:\users\paul\programming\cpp_practice\cpp_practice\tree.h(85) : while compiling class template member function 'std::list<int,std::allocator<_Ty>> BinaryTree<int>::BFSList(void)'
+                 with
+                 [
+                     _Ty=int
+                 ]
+                 c:\users\paul\programming\cpp_practice\cpp_practice\cpp_practice.cpp(61) : see reference to function template instantiation 'std::list<int,std::allocator<_Ty>> BinaryTree<int>::BFSList(void)' being compiled
+                 with
+                 [
+                     _Ty=int
+                 ]
+                 c:\users\paul\programming\cpp_practice\cpp_practice\cpp_practice.cpp(57) : see reference to class template instantiation 'BinaryTree<int>' being compiled
+     1>c:\users\paul\programming\cpp_practice\cpp_practice\tree.h(89): error C2146: syntax error : missing ';' before identifier 'nodesInOrderItr'
+     1>c:\users\paul\programming\cpp_practice\cpp_practice\tree.h(89): error C2065: 'nodesInOrderItr' : undeclared identifier
+     1>c:\users\paul\programming\cpp_practice\cpp_practice\tree.h(89): error C2228: left of '.begin' must have class/struct/union
+                 type is 'std::list<int,std::allocator<_Ty>> *'
+                 with
+                 [
+                     _Ty=int
+                 ]
+                 did you intend to use '->' instead?
+     1>c:\users\paul\programming\cpp_practice\cpp_practice\tree.h(90): error C2228: left of '.push_back' must have class/struct/union
+                 type is 'std::list<int,std::allocator<_Ty>> *'
+                 with
+                 [
+                     _Ty=int
+                 ]
+                 did you intend to use '->' instead?
+     1>c:\users\paul\programming\cpp_practice\cpp_practice\tree.h(91): error C2065: 'nodesInOrderItr' : undeclared identifier
+     1>c:\users\paul\programming\cpp_practice\cpp_practice\tree.h(91): error C2228: left of '.end' must have class/struct/union
+                 type is 'std::list<int,std::allocator<_Ty>> *'
+                 with
+                 [
+                     _Ty=int
+                 ]
+                 did you intend to use '->' instead?
+     1>c:\users\paul\programming\cpp_practice\cpp_practice\tree.h(91): fatal error C1903: unable to recover from previous error(s); stopping compilation
+         array.cpp
          Generating Code...
-     1>Done Building Project "C:\Users\Paul\Programming\cpp_practice\cpp_practice\cpp_practice.vcxproj" (Build target(s)) -- FAILED.
+     1>Done Building Project "C:\Users\Paul\Programming\cpp_practice\cpp_practice\cpp_practice.vcxproj" (Rebuild target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:01.97
+Time Elapsed 00:00:07.43

@@ -72,14 +72,14 @@ int betterLinkedlistChap2(std::list<int> inputList, int k)
 *		prints to the screen the contents of a list
 * ****************************************************************************/
 
-/*template<typename Object>
-void std::list<Object>::printList()
+template<typename Object>
+void printList(std::list<Object> listToPrint)
 {
-	std::list<Object>::iterator throughList = this.cbegin();
-	while (throughList != this.cend())
+	std::list<Object>::iterator throughList = listToPrint.cbegin();
+	while (throughList != listToPrint.cend())
 	{
 		std::cout << *throughList << " ";
 		throughList++;
 	}
 	std::cout << std::endl;
-}*/
+}

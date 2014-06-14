@@ -7,7 +7,7 @@
 
 problemSet problem = tree;
 
-void unorderedMapPractice()
+static void unorderedMapPractice()
 {
 	std::pair<int, std::string> paulPair(2, "Karolina");
 
@@ -54,18 +54,16 @@ int main(int argc, char* argv[])
 		break;
 
 	case(tree) :
-		// next line causing problems:
-		//BinaryTree<int>::treePractice();
-
-		BinaryTree<int>* pTree = new BinaryTree<int>();
+	{BinaryTree<int>* pTree = new BinaryTree<int>();
 		pTree->addValue(3);
 		pTree->addValue(2);
 		pTree->addValue(1);
 		pTree->BFSList();
-		break;
+		break; }
 
 	default:
 		unorderedMapPractice();
+		break;
 	}
 
 	//unorderedMapPractice();
