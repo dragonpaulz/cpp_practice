@@ -80,6 +80,7 @@
   <ItemGroup>
     <ClInclude Include="array.h" />
     <ClInclude Include="cpp_practice.h" />
+    <ClInclude Include="Graph.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="StacksQueues.h" />

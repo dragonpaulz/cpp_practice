@@ -54,20 +54,15 @@ int main(int argc, char* argv[])
 		break;
 
 	case(tree) :
-	{BinaryTree<int>* pTree = new BinaryTree<int>();
-		pTree->addValue(3);
-		pTree->addValue(2);
-		pTree->addValue(1);
-		pTree->BFSList();
-		break; }
+
+		break; 
 
 	default:
 		unorderedMapPractice();
 		break;
 	}
 
-	//unorderedMapPractice();
-
+	std::cout << "\nDone" << std::endl;
 
 	return 0;
 }

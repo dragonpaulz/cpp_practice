@@ -54,7 +54,7 @@ void treeChap9();
 /* ****************************************************************************
 * class BinaryTree
 *
-*	A class to make a binary search tree.
+*	My own implementation of the Binary Search Tree.
 * ****************************************************************************/
 
 template<typename Object>
@@ -81,6 +81,13 @@ public:
 		}
 	}
 
+	/* ************************************************************************
+	* std::list<Object> BFSList()
+	* 
+	*	returns:
+	*		a linked list containing the contents of a tree in the Breadth
+	*		first search order.
+	* ************************************************************************/
 	std::list<Object> BFSList()
 	{
 		std::list<Object> * nodesInOrder = new std::list<Object>;
