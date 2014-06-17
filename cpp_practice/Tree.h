@@ -74,7 +74,9 @@ public:
 			root = new TreeNode<Object>(v);
 			return;
 		}
+		
 		TreeNode<Object> *currentNode = root;
+
 		if (currentNode->value <= v)
 		{
 

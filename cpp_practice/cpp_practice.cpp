@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
 		break;
 
 	case(tree) :
-
+		//graphPractice();
 		break; 
 
 	default:
@@ -77,4 +77,10 @@ void informUser(bool result)
 	{
 		std::cout << "The result is false" << std::endl;
 	}
+}
+
+void graphPractice()
+{
+	Graph<int, false> *practice = new Graph<int, false>(3);
+	practice->printAdjacencyMatrix();
 }

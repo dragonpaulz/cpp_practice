@@ -27,5 +27,10 @@
 #include "LinkedList.h"
 #endif
 
+#ifndef CPP_PRACTICE_GRAPH_H_
+#define CPP_PRACTICE_GRAPH_H_
+#include "Graph.h"
+#endif
+
 // TODO: reference any additional headers you need in STDAFX.H
 // and not in this file

@@ -91,6 +91,7 @@
   <ItemGroup>
     <ClCompile Include="array.cpp" />
     <ClCompile Include="cpp_practice.cpp" />
+    <ClCompile Include="Graph.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="StacksQueues.cpp" />

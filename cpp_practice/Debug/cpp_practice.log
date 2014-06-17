@@ -1,27 +1,48 @@
-﻿Build started 16/06/2014 7:16:49 PM.
+﻿Build started 17/06/2014 9:51:53 AM.
      1>Project "D:\Users\dragonpaulz\documents\Cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\cpp_practice.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
          stdafx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt array.cpp cpp_practice.cpp LinkedList.cpp Node.cpp StacksQueues.cpp Tree.cpp
-         Tree.cpp
-         StacksQueues.cpp
-         Node.cpp
-         LinkedList.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Graph.cpp cpp_practice.cpp
          cpp_practice.cpp
-         array.cpp
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\graph.h(23): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'std::vector<std::vector<Object,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> *' (or there is no acceptable conversion)
+                 with
+                 [
+                     Object=int
+         ,            _Ty=int
+                 ]
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(948): could be 'std::vector<std::vector<Object,std::allocator<_Ty>> *,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> &std::vector<std::vector<_Ty,std::allocator<_Ty>> *,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>::operator =(const std::vector<std::vector<_Ty,std::allocator<_Ty>> *,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> &)'
+                 with
+                 [
+                     Object=int
+         ,            _Ty=int
+                 ]
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(926): or       'std::vector<std::vector<Object,std::allocator<_Ty>> *,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> &std::vector<std::vector<_Ty,std::allocator<_Ty>> *,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>::operator =(std::initializer_list<std::vector<_Ty,std::allocator<_Ty>> *>)'
+                 with
+                 [
+                     Object=int
+         ,            _Ty=int
+                 ]
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(822): or       'std::vector<std::vector<Object,std::allocator<_Ty>> *,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> &std::vector<std::vector<_Ty,std::allocator<_Ty>> *,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>::operator =(std::vector<std::vector<_Ty,std::allocator<_Ty>> *,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> &&)'
+                 with
+                 [
+                     Object=int
+         ,            _Ty=int
+                 ]
+                 while trying to match the argument list '(std::vector<std::vector<Object,std::allocator<_Ty>> *,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>, std::vector<std::vector<Object,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> *)'
+                 with
+                 [
+                     Object=int
+         ,            _Ty=int
+                 ]
+                 d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\graph.h(19) : while compiling class template member function 'Graph<int,false>::Graph(unsigned int)'
+                 d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.cpp(84) : see reference to function template instantiation 'Graph<int,false>::Graph(unsigned int)' being compiled
+                 d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.cpp(84) : see reference to class template instantiation 'Graph<int,false>' being compiled
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\graph.h(24): warning C4018: '<' : signed/unsigned mismatch
+         Graph.cpp
          Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\dragonpaulz\documents\Cpp_practice_2013\cpp_practice\Debug\cpp_practice.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Users\dragonpaulz\documents\Cpp_practice_2013\cpp_practice\Debug\cpp_practice.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\dragonpaulz\documents\Cpp_practice_2013\cpp_practice\Debug\cpp_practice.lib" /MACHINE:X86 Debug\array.obj
-         Debug\cpp_practice.obj
-         Debug\LinkedList.obj
-         Debug\Node.obj
-         Debug\StacksQueues.obj
-         Debug\stdafx.obj
-         Debug\Tree.obj
-         cpp_practice.vcxproj -> D:\Users\dragonpaulz\documents\Cpp_practice_2013\cpp_practice\Debug\cpp_practice.exe
-     1>Done Building Project "D:\Users\dragonpaulz\documents\Cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.vcxproj" (Build target(s)).
+     1>Done Building Project "D:\Users\dragonpaulz\documents\Cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:03.71
+Time Elapsed 00:00:01.31
