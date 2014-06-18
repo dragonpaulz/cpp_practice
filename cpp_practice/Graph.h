@@ -22,11 +22,11 @@ public:
 		connections.resize(nNodes);
 		for (unsigned int i = 0; i < nNodes; i++)
 		{
-			connections[i].resize(nNodes);
+			connections.at(i).resize(nNodes);
 
 			for (unsigned int j = 0; j < nNodes; j++)
 			{
-				connections[i][j] =false;
+				connections.at(i).at(j) =false;
 			}
 		}
 	}
@@ -38,19 +38,19 @@ public:
 
 	void addConnection(unsigned int fromNode, unsigned int toNode)
 	{
-		connections[fromNode][toNode] = true;
-		if (!directed)
-		{
-			connections[toNode][fromNode];
-		}
+			connections.at(fromNode).at(toNode) = true;
+			if (!directed)
+			{
+				connections.at(toNode).at(fromNode) = true;
+			}
 	}
 
 	void removeConnection(unsigned int fromNode, unsigned int toNode)
 	{
-		connections[fromNode][toNode] = false;
+		connections.at(fromNode).at(toNode) = false;
 		if (!directed)
 		{
-			connections[toNode][fromNode] = false;
+			connections.at(toNode).at(fromNode) = false;
 		}
 	}
 
@@ -60,7 +60,7 @@ public:
 		{
 			for (unsigned int j = 0; j < connections.size(); j++)
 			{
-				if (connections[i][j])
+				if (connections.at(i).at(j) )
 					std::cout << "1 ";
 				else
 					std::cout << "0 ";
