@@ -29,6 +29,15 @@ static void unorderedMapPractice()
 	std::cout << mapItr._Ptr << std::endl;
 }
 
+void graphPractice()
+{
+	Graph<int, false> *practice = new Graph<int, false>(3);
+	
+	practice->addConnection(0, 1);
+	practice->addConnection(1, 2);
+	practice->printAdjacencyMatrix();
+}
+
 int main(int argc, char* argv[])
 {
 	switch(problem)
@@ -54,7 +63,7 @@ int main(int argc, char* argv[])
 		break;
 
 	case(tree) :
-		//graphPractice();
+		graphPractice();
 		break; 
 
 	default:
@@ -79,8 +88,3 @@ void informUser(bool result)
 	}
 }
 
-void graphPractice()
-{
-	Graph<int, false> *practice = new Graph<int, false>(3);
-	practice->printAdjacencyMatrix();
-}
