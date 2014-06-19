@@ -17,6 +17,15 @@ class Graph
 	// vector is more safe than using bool **. 
 	std::vector< std::vector< bool > > connections;
 	std::vector< Object > nodeValues;
+
+	void changeConnections(bool finalState, int fromNode, int toNode)
+	{
+		connections.at(fromNode).at(toNode) = finalState;
+		if (!directed)
+		{
+			connections.at(toNode).at(fromNode) = finalState;
+		}
+	}
 public:
 	Graph(unsigned int nNodes)
 	{
@@ -38,11 +47,14 @@ public:
 		Graph(1);
 	}
 
+	// sets the value for a particular node.
 	void setNodeValue(unsigned int nodeNum, Object value)
 	{
 		nodeValues.at(nodeNum) = value;
 	}
 
+	// Adds connections between nodes in the graph. If the graph is undirected
+	// then the connections are established both ways.
 	void addConnection(unsigned int fromNode, unsigned int toNode)
 	{
 		try
@@ -55,6 +67,8 @@ public:
 		}
 	}
 
+	// Removes connections between nodes in the graph. If the graph is 
+	// undirected, then the connections are removed both ways.
 	void removeConnection(unsigned int fromNode, unsigned int toNode)
 	{
 		try
@@ -67,15 +81,9 @@ public:
 		}
 	}
 
-	void changeConnections(bool finalState, int fromNode, int toNode)
-	{
-		connections.at(fromNode).at(toNode) = finalState;
-		if (!directed)
-		{
-			connections.at(toNode).at(fromNode) = finalState;
-		}
-	}
 
+	// Prints to screen a representation of the graph. The rows represent 
+	// starting node and the columns represent the end node.
 	void printAdjacencyMatrix()
 	{
 		for (unsigned int i = 0; i < connections.size(); i++)

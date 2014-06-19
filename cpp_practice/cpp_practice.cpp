@@ -77,9 +77,9 @@ int main(int argc, char* argv[])
 		dupList->push_back('a');
 		dupList->push_back('b');
 		dupList->push_front('a');
-
 		break;
 	}
+
 
 	case(tree) :
 		graphPractice();

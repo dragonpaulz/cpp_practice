@@ -98,15 +98,31 @@ int betterLinkedlistChap2(std::list<int> inputList, int k)
 	return *behind;//don't forget to put the reference to the element
 }
 
+void linkedlistChap3(std::list<int> *wholeList, std::list<int>::iterator middle)
+{
+	std::list<int>::iterator checkItr;
+	checkItr = wholeList->begin();
+
+	while (checkItr != wholeList->cend() )
+	{
+		if (checkItr == middle)
+		{
+			wholeList->erase(checkItr);
+			return;
+		}
+		checkItr++;
+	}
+}
+
 /* ****************************************************************************
-* void std::list<Object>::printList()
+* static void std::list<Object>::printList()
 *
 *	output:
 *		prints to the screen the contents of a list
 * ****************************************************************************/
 
 template<typename Object>
-void printList(std::list<Object> listToPrint)
+static void printList(std::list<Object> listToPrint)
 {
 	std::list<Object>::iterator throughList = listToPrint.cbegin();
 	while (throughList != listToPrint.cend())
