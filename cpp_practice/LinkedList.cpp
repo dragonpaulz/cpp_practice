@@ -20,11 +20,44 @@ void linkedListPractice()
 	return;
 }
 
-std::list<char> linkedlistChap1(std::list<char> inputLinkedList)
+/* ****************************************************************************
+/ Removes duplicates from the linkedlist.
+/ This does not change the linkedlist, which would be a different algorithm
+/ If one were to change the linkedlist so that there are no duplicates, then
+/ the function would change the pointers so that the duplicate items are
+/ skipped over.
+/ ****************************************************************************/
+std::list<char>* linkedlistChap1(std::list<char> inputLinkedList)
 {
 
-	return inputLinkedList;
+	// char chosen because we can assume it has a certain number of possible 
+	// values.
+	const unsigned int MAXVALUES = 256;
+	std::vector<bool> seenValues(MAXVALUES, false);
+
+	std::list<char>::iterator checkValueItr;
+
+	std::list<char> *returnList = new std::list<char>();
+
+	checkValueItr = inputLinkedList.begin();
+	while (checkValueItr != inputLinkedList.end())
+	{
+		// value has not been seen before
+		if (!seenValues.at(*checkValueItr))
+		{
+			returnList->push_back(*checkValueItr);
+			seenValues.at(*checkValueItr) = true;
+		}
+	}
+
+	return returnList;
 }
+
+/* ****************************************************************************
+* Follow-up, if there's one were to do linkedlistChap1 without any extra data
+* structures, then the function would change the pointers to skip the duplicate
+* items.
+* ****************************************************************************/
 
 int linkedlistChap2(std::list<int> inputList, int k) {
 	if(inputList.begin() == inputList.end())

@@ -47,7 +47,7 @@ public:
 	{
 		try
 		{
-			changeConnections(true);
+			changeConnections(true, fromNode, toNode);
 		}
 		catch (const std::out_of_range& e)
 		{
@@ -59,7 +59,7 @@ public:
 	{
 		try
 		{
-			changeConnections(false);
+			changeConnections(false, fromNode, toNode);
 		}
 		catch (const std::out_of_range& e)
 		{
@@ -67,7 +67,7 @@ public:
 		}
 	}
 
-	void changeConnections(bool finalState)
+	void changeConnections(bool finalState, int fromNode, int toNode)
 	{
 		connections.at(fromNode).at(toNode) = finalState;
 		if (!directed)

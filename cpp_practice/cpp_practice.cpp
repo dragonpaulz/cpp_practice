@@ -39,6 +39,18 @@ void graphPractice()
 	practice->printAdjacencyMatrix();
 }
 
+void informUser(bool result)
+{
+	if (result)
+	{
+		std::cout << "The result is true" << std::endl;
+	}
+	else
+	{
+		std::cout << "The result is false" << std::endl;
+	}
+}
+
 int main(int argc, char* argv[])
 {
 	switch(problem)
@@ -60,8 +72,14 @@ int main(int argc, char* argv[])
 		break;
 
 	case(linkedlist1):
-		std::list<int> linkedlistChap1(std::list<int> original_list);
+	{
+		std::list<char> *dupList;
+		dupList->push_back('a');
+		dupList->push_back('b');
+		dupList->push_front('a');
+
 		break;
+	}
 
 	case(tree) :
 		graphPractice();
@@ -77,14 +95,3 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
-void informUser(bool result)
-{
-	if (result)
-	{
-		std::cout << "The result is true" << std::endl;
-	}
-	else
-	{
-		std::cout << "The result is false" << std::endl;
-	}
-}
