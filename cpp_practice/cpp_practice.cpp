@@ -35,6 +35,7 @@ void graphPractice()
 	
 	practice->addConnection(0, 1);
 	practice->addConnection(1, 2);
+	practice->addConnection(2, 3);
 	practice->printAdjacencyMatrix();
 }
 
@@ -87,4 +88,3 @@ void informUser(bool result)
 		std::cout << "The result is false" << std::endl;
 	}
 }
-

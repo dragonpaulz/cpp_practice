@@ -16,10 +16,12 @@ class Graph
 {
 	// vector is more safe than using bool **. 
 	std::vector< std::vector< bool > > connections;
+	std::vector< Object > nodeValues;
 public:
 	Graph(unsigned int nNodes)
 	{
 		connections.resize(nNodes);
+		nodeValues.resize(nNodes);
 		for (unsigned int i = 0; i < nNodes; i++)
 		{
 			connections.at(i).resize(nNodes);
@@ -36,21 +38,41 @@ public:
 		Graph(1);
 	}
 
+	void setNodeValue(unsigned int nodeNum, Object value)
+	{
+		nodeValues.at(nodeNum) = value;
+	}
+
 	void addConnection(unsigned int fromNode, unsigned int toNode)
 	{
-			connections.at(fromNode).at(toNode) = true;
-			if (!directed)
-			{
-				connections.at(toNode).at(fromNode) = true;
-			}
+		try
+		{
+			changeConnections(true);
+		}
+		catch (const std::out_of_range& e)
+		{
+			printErrorMsg(e, fromNode, toNode);
+		}
 	}
 
 	void removeConnection(unsigned int fromNode, unsigned int toNode)
 	{
-		connections.at(fromNode).at(toNode) = false;
+		try
+		{
+			changeConnections(false);
+		}
+		catch (const std::out_of_range& e)
+		{
+			printErrorMsg(e, fromNode, toNode);
+		}
+	}
+
+	void changeConnections(bool finalState)
+	{
+		connections.at(fromNode).at(toNode) = finalState;
 		if (!directed)
 		{
-			connections.at(toNode).at(fromNode) = false;
+			connections.at(toNode).at(fromNode) = finalState;
 		}
 	}
 
@@ -67,5 +89,12 @@ public:
 			}
 			std::cout << std::endl;
 		}
+	}
+
+	void printErrorMsg(const std::out_of_range& e, int fromNode, int toNode)
+	{
+		std::cout << "Out of bounds error. Item " << fromNode << " or " <<
+			toNode << " in " << e.what() << " does not exist." <<
+			std::endl;
 	}
 };

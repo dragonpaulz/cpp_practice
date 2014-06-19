@@ -20,7 +20,7 @@ void linkedListPractice()
 	return;
 }
 
-std::list<int> linkedlistChap1(std::list<int> inputLinkedList)
+std::list<char> linkedlistChap1(std::list<char> inputLinkedList)
 {
 
 	return inputLinkedList;
