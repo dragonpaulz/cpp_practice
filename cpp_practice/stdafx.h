@@ -32,9 +32,34 @@
 #include <stdio.h>
 #endif
 
+#ifndef STD_UNORDERED_SET_
+#define STD_UNORDERED_SET_
+#include <unordered_set>
+#endif
+
 #ifndef STD_UNORDERED_MAP_
 #define STD_UNORDERED_MAP_
 #include <unordered_map>
+#endif
+
+#ifndef STD_VECTOR_
+#define STD_VECTOR_
+#include <vector>
+#endif
+
+#ifndef STD_MAP_
+#define STD_MAP_
+#include <map>
+#endif
+
+#ifndef STD_QUEUE_
+#define STD_QUEUE_
+#include <queue>
+#endif
+
+#ifndef STD_SET_
+#define STD_SET_
+#include <set>
 #endif
 
 // This is a visual studio only variable...
@@ -48,12 +73,3 @@
 #include <algorithm>
 #endif
 
-#ifndef STD_VECTOR_
-#define STD_VECTOR_
-#include <vector>
-#endif
-
-#ifndef STD_MAP_
-#define STD_MAP_
-#include <map>
-#endif

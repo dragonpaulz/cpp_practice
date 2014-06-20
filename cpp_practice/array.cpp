@@ -67,6 +67,7 @@ bool arrayChap1Better(std::string nonRepeating)
 	return true;
 }
 
+// reverse a C-style string
 void reverse(char* str)
 {
 	char *end;
@@ -86,6 +87,8 @@ void reverse(char* str)
 	return;
 }
 
+// discover whether two strings are permutations of one another
+// returns true if they are permutations.
 bool arrayChap3(std::string s1, std::string s2)
 {
 	
@@ -93,5 +96,32 @@ bool arrayChap3(std::string s1, std::string s2)
 	std::sort(s1.begin(), s1.end());
 	std::sort(s2.begin(), s2.end());
 
+	// if the sorted strings are the same, then they are permutations.
 	return s1 == s2;
+}
+
+void arrayChap4(std::string& inputString)
+{
+	std::queue<char> tempQueue;
+	std::string::iterator tempChar = inputString.begin();
+
+	for (int i = 0; i < inputString.size(); i++)
+	{
+		if (*tempChar == ' ')
+		{
+			tempQueue.push('%');
+			tempQueue.push('2');
+			tempQueue.push('0');
+		}
+		else
+		{
+			tempQueue.push(*tempChar);
+		}
+		
+		*tempChar = tempQueue.front();
+		
+		tempQueue.pop();
+		tempChar++;
+	}
+
 }

@@ -5,7 +5,7 @@
 
 #include "stdafx.cpp"
 
-problemSet problem = tree;
+problemSet problem = array4;
 
 static void unorderedMapPractice()
 {
@@ -70,6 +70,14 @@ int main(int argc, char* argv[])
 	case(array3) :
 		informUser(arrayChap3("cat", "tca"));
 		break;
+
+	case(array4) :
+	{
+					 std::string word = " a  ";
+					 arrayChap4(word);
+					 std::cout << word << std::endl;
+					 break;
+	}
 
 	case(linkedlist1):
 	{
