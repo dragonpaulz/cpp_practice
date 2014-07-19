@@ -5,6 +5,7 @@
 *	adjacency-matrix. The adjacency-matrix representation is explained in
 *	section 22.1 from "Introduction to Algorithms: Second Edition" by Cormen,
 *	Leiserson, Rivest, and Stein.
+*	Each graph node has an integer attached to it. 
 *
 *	template:
 *		typename: type of value kept in the key
@@ -45,6 +46,13 @@ public:
 	Graph()
 	{
 		Graph(1);
+	}
+
+	// returns the nodes neighbours as a vector of boolean values. True 
+	// indicates that a connection from nodeNumber exists to another node.
+	std::vector<bool> nodeNeighbours(int nodeNumber)
+	{
+		return connections.at(nodeNumber);
 	}
 
 	// sets the value for a particular node.
@@ -106,3 +114,14 @@ public:
 			std::endl;
 	}
 };
+
+class Tree
+{
+
+};
+
+template<typename T>
+bool graphChap1(std::set<T>);
+void graphChap2();
+void graphChap3();
+

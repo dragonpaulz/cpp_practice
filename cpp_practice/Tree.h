@@ -2,7 +2,7 @@
 // however this is an implementation of a tree. This is merely an exercise in
 // practice programming, and it should not be used as an alternative to map.
 
-
+enum colour{ red, black };
 
 
 
@@ -14,8 +14,11 @@ protected:
 	TreeNode *left = nullptr;
 	TreeNode *right = nullptr;
 
+	// declare friend classes
 	template<typename Object>
 	friend class BinaryTree;
+	friend class RBTreeNode;
+	friend class RBBinaryTree;
 
 	TreeNode(Object v)
 	{
@@ -39,17 +42,24 @@ public:
 
 };
 
+/* ****************************************************************************
+* class RBTreeNode
+*
+*	Nodes that make up a red-black tree.
+* ****************************************************************************/
+template<typename Object>
+class RBTreeNode<Object> : protected TreeNode<Object>
+{
+protected:
+	colour nodeColour;
 
+	RBTreeNode(Object v, colour startColour)
+	{
+		nodeColour = startColour;
+		TreeNode(v);
+	}
+};
 
-void treeChap1();
-void treeChap2();
-void treeChap3();
-void treeChap4();
-void treeChap5();
-void treeChap6();
-void treeChap7();
-void treeChap8();
-void treeChap9();
 
 /* ****************************************************************************
 * class BinaryTree
@@ -65,7 +75,11 @@ private:
 
 
 	// rebalancing function
-	void balanceTree();
+	void balanceTree()
+	{
+
+	}
+
 public:
 	void addValue(Object v)
 	{
@@ -110,3 +124,17 @@ public:
 
 	static void treePractice();
 };
+
+// To write: RBBinaryTree
+
+// declare functions to do in the book
+template<typename Object>
+bool treeChap1(RBBinaryTree<Object>);
+void treeChap2();
+void treeChap3();
+void treeChap4();
+void treeChap5();
+void treeChap6();
+void treeChap7();
+void treeChap8();
+void treeChap9();

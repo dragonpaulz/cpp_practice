@@ -5,7 +5,7 @@
 
 #include "stdafx.cpp"
 
-problemSet problem = array4;
+problemSet problem = tree;
 
 static void unorderedMapPractice()
 {
@@ -37,6 +37,15 @@ void graphPractice()
 	practice->addConnection(1, 2);
 	practice->addConnection(2, 3);
 	practice->printAdjacencyMatrix();
+}
+
+void treePractice()
+{
+	std::set<int> paulSet;
+	paulSet.insert(3);
+	paulSet.insert(1);
+	paulSet.insert(2);
+
 }
 
 void informUser(bool result)
@@ -90,9 +99,12 @@ int main(int argc, char* argv[])
 
 
 	case(tree) :
-		graphPractice();
+		//graphPractice();
+		treePractice();
 		break; 
 
+	case(tree1) :
+		break;
 	default:
 		unorderedMapPractice();
 		break;
