@@ -11,8 +11,6 @@ template<typename Object>
 class TreeNode{
 protected:
 	Object value;
-	TreeNode *left = nullptr;
-	TreeNode *right = nullptr;
 
 	// declare friend classes
 	template<typename Object>
@@ -25,6 +23,9 @@ protected:
 		value = v;
 	}
 public:
+	TreeNode *left = nullptr;
+	TreeNode *right = nullptr;
+
 	Object getValue()
 	{
 		return value;
@@ -47,18 +48,18 @@ public:
 *
 *	Nodes that make up a red-black tree.
 * ****************************************************************************/
-template<typename Object>
-class RBTreeNode<Object> : protected TreeNode<Object>
+/*template<typename Object2>
+class RBTreeNode<Object2>
 {
 protected:
 	colour nodeColour;
 
-	RBTreeNode(Object v, colour startColour)
+	RBTreeNode(Object2 v, colour startColour)
 	{
 		nodeColour = startColour;
 		TreeNode(v);
 	}
-};
+};*/
 
 
 /* ****************************************************************************
@@ -129,7 +130,7 @@ public:
 
 // declare functions to do in the book
 template<typename Object>
-bool treeChap1(RBBinaryTree<Object>);
+bool treeChap1(BinaryTree<Object>);
 void treeChap2();
 void treeChap3();
 void treeChap4();

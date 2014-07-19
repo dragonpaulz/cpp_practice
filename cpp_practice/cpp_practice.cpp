@@ -90,10 +90,10 @@ int main(int argc, char* argv[])
 
 	case(linkedlist1):
 	{
-		std::list<char> *dupList;
-		dupList->push_back('a');
-		dupList->push_back('b');
-		dupList->push_front('a');
+		std::list<char> dupList;
+		dupList.push_back('a');
+		dupList.push_back('b');
+		dupList.push_front('a');
 		break;
 	}
 
