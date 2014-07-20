@@ -160,8 +160,8 @@ public:
 
 // declare functions to do in the book
 bool treeChap1(BinaryTree*);
-bool isBalanced(TreeNode*);
-int checkHeight(TreeNode *);
+bool treeChap1Helper(TreeNode*);
+int getHeight(TreeNode *);
 
 void treeChap2();
 void treeChap3();
