@@ -26,20 +26,46 @@ static void BinaryTree<Object>::treePractice()
 bool treeChap1(BinaryTree *checkThisTree)
 {
 	if (checkThisTree->root == nullptr) return true;
-	return treeChap1Helper(checkThisTree->root);
+	return isBalanced(checkThisTree->root);
 }
 
 
-bool treeChap1Helper(TreeNode *subTree)
+bool isBalanced(TreeNode *subTree)
 {
-	if (subTree == nullptr) return true;
-	if (abs(getHeight(subTree->left) - getHeight(subTree->right)) > 1) return false;
-	return treeChap1Helper(subTree->left) && treeChap1Helper(subTree->right);
+	if (checkHeight(subTree) == -1)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
 }
 
 
-int getHeight(TreeNode * subTree)
+int checkHeight(TreeNode * subTree)
 {
 	if (subTree == nullptr) return 0;
-	return (std::max(getHeight(subTree->left), getHeight(subTree->right))) + 1;
+	
+	int leftHeight = checkHeight(subTree->left);
+	if (leftHeight == -1)
+	{
+		return -1;
+	}
+
+	int rightHeight = checkHeight(subTree->right);
+	if (rightHeight == -1)
+	{
+		return -1;
+	}
+
+	int heightDiff = leftHeight - rightHeight;
+	if (std::abs(heightDiff) > 1)
+	{
+		return -1;
+	}
+	else
+	{
+		return std::max(leftHeight, rightHeight) + 1;
+	}
 }
