@@ -8,7 +8,8 @@ enum colour{ red, black };
 
 
 template<typename Object>
-class TreeNode{
+class TreeNode
+{
 protected:
 	Object value;
 
@@ -18,13 +19,23 @@ protected:
 	friend class RBTreeNode;
 	friend class RBBinaryTree;
 
+public:
+	TreeNode *left;
+	TreeNode *right;
+
 	TreeNode(Object v)
 	{
 		value = v;
+		left = nullptr;
+		right = nullptr;
 	}
-public:
-	TreeNode *left = nullptr;
-	TreeNode *right = nullptr;
+
+	TreeNode()
+	{
+		value = NULL;
+		left = nullptr;
+		right = nullptr;
+	}
 
 	Object getValue()
 	{
@@ -41,6 +52,8 @@ public:
 		return right;
 	}
 
+
+
 };
 
 /* ****************************************************************************
@@ -48,8 +61,8 @@ public:
 *
 *	Nodes that make up a red-black tree.
 * ****************************************************************************/
-/*template<typename Object2>
-class RBTreeNode<Object2>
+/*template <typename Object> // error C3857?
+class RBTreeNode<Object>
 {
 protected:
 	colour nodeColour;
@@ -72,8 +85,6 @@ template<typename Object>
 class BinaryTree
 {
 private:
-	TreeNode<Object> *root = nullptr;
-
 
 	// rebalancing function
 	void balanceTree()
@@ -82,6 +93,7 @@ private:
 	}
 
 public:
+	TreeNode<Object> *root = nullptr;
 	void addValue(Object v)
 	{
 		if (root == nullptr)
@@ -92,9 +104,27 @@ public:
 		
 		TreeNode<Object> *currentNode = root;
 
-		if (currentNode->value <= v)
+		// put a new tree node in the tree.
+		while (currentNode != nullptr)
 		{
-
+			if (currentNode->value <= v)
+			{
+				if (currenNode->left == nullptr)
+				{
+					currentNode->left = new TreeNode(v);
+					break;
+				}
+				currentNode = currentNode->left;
+			}
+			else
+			{
+				if (currentNode->right == nullptr)
+				{
+					currentNode->right = new TreeNode(v);
+					break;
+				}
+				currentNode = currentNode->right;
+			}
 		}
 	}
 
@@ -130,7 +160,11 @@ public:
 
 // declare functions to do in the book
 template<typename Object>
-bool treeChap1(BinaryTree<Object>);
+bool treeChap1(BinaryTree<Object>*);
+template<typename Object>
+bool treeChap1Helper(TreeNode<Object>*);
+template<typename Object>
+int getHeight(TreeNode<Object> *);
 void treeChap2();
 void treeChap3();
 void treeChap4();

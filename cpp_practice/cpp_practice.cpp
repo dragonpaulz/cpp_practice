@@ -104,7 +104,14 @@ int main(int argc, char* argv[])
 		break; 
 
 	case(tree1) :
+	{
+		BinaryTree<int> *paulTree = new BinaryTree<int>;
+		paulTree->addValue(3);
+		paulTree->addValue(1);
+		paulTree->addValue(2);
+		//treeChap1(paulTree);
 		break;
+	}
 	default:
 		unorderedMapPractice();
 		break;
