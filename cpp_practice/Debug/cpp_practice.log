@@ -1,5 +1,5 @@
-﻿Build started 19/07/2014 10:59:17 PM.
-     1>Project "D:\Users\dragonpaulz\documents\Cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.vcxproj" on node 2 (Build target(s)).
+﻿Build started 19/07/2014 11:03:47 PM.
+     1>Project "D:\Users\dragonpaulz\documents\Cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\cpp_practice.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
          stdafx.cpp
@@ -23,8 +23,8 @@
          Debug\stdafx.obj
          Debug\Tree.obj
          cpp_practice.vcxproj -> D:\Users\dragonpaulz\documents\Cpp_practice_2013\cpp_practice\Debug\cpp_practice.exe
-     1>Done Building Project "D:\Users\dragonpaulz\documents\Cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.vcxproj" (Build target(s)).
+     1>Done Building Project "D:\Users\dragonpaulz\documents\Cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.57
+Time Elapsed 00:00:04.53

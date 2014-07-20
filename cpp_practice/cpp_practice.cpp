@@ -5,7 +5,7 @@
 
 #include "stdafx.cpp"
 
-problemSet problem = tree;
+problemSet problem = tree1;
 
 static void unorderedMapPractice()
 {
@@ -106,10 +106,10 @@ int main(int argc, char* argv[])
 	case(tree1) :
 	{
 		BinaryTree *paulTree = new BinaryTree;
-		paulTree->addValue(3);
-		paulTree->addValue(1);
 		paulTree->addValue(2);
-		//treeChap1(paulTree);
+		paulTree->addValue(1);
+		paulTree->addValue(3);
+		informUser(treeChap1(paulTree));
 		break;
 	}
 	default:
