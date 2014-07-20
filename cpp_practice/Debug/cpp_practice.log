@@ -1,33 +1,36 @@
-﻿Build started 19/07/2014 8:49:17 PM.
+﻿Build started 19/07/2014 10:08:52 PM.
      1>Project "D:\Users\dragonpaulz\documents\Cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\cpp_practice.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
          stdafx.cpp
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt array.cpp cpp_practice.cpp Graph.cpp LinkedList.cpp Node.cpp StacksQueues.cpp Tree.cpp
          Tree.cpp
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.cpp(35): error C2676: binary '==' : 'TreeNode' does not define this operator or a conversion to a type acceptable to the predefined operator
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.cpp(36): error C2065: 'root' : undeclared identifier
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.cpp(36): error C2227: left of '->left' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.cpp(36): error C2227: left of '->right' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.cpp(41): error C2143: syntax error : missing ')' before '<'
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.cpp(41): error C2143: syntax error : missing ';' before '<'
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.cpp(41): error C2988: unrecognizable template declaration/definition
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.cpp(41): error C2059: syntax error : '<'
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.cpp(41): error C2059: syntax error : ')'
          StacksQueues.cpp
          Node.cpp
          LinkedList.cpp
          Graph.cpp
          cpp_practice.cpp
-     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.h(112): error C2065: 'currenNode' : undeclared identifier
-                 d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.h(98) : while compiling class template member function 'void BinaryTree<int>::addValue(Object)'
-                 with
-                 [
-                     Object=int
-                 ]
-                 d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.cpp(109) : see reference to function template instantiation 'void BinaryTree<int>::addValue(Object)' being compiled
-                 with
-                 [
-                     Object=int
-                 ]
-                 d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.cpp(108) : see reference to class template instantiation 'BinaryTree<int>' being compiled
-     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.h(112): error C2227: left of '->left' must point to class/struct/union/generic type
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.cpp(108): error C2143: syntax error : missing ';' before '<'
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.cpp(109): error C2065: 'paulTree' : undeclared identifier
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.cpp(109): error C2227: left of '->addValue' must point to class/struct/union/generic type
                  type is 'unknown-type'
-     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.h(114): error C2514: 'TreeNode' : class has no constructors
-                 d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.h(12) : see declaration of 'TreeNode'
-     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.h(123): error C2514: 'TreeNode' : class has no constructors
-                 d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\tree.h(12) : see declaration of 'TreeNode'
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.cpp(110): error C2065: 'paulTree' : undeclared identifier
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.cpp(110): error C2227: left of '->addValue' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.cpp(111): error C2065: 'paulTree' : undeclared identifier
+     1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.cpp(111): error C2227: left of '->addValue' must point to class/struct/union/generic type
+                 type is 'unknown-type'
          array.cpp
      1>d:\users\dragonpaulz\documents\cpp_practice_2013\cpp_practice\cpp_practice\array.cpp(108): warning C4018: '<' : signed/unsigned mismatch
          Generating Code...
@@ -35,4 +38,4 @@
 
 Build FAILED.
 
-Time Elapsed 00:00:04.47
+Time Elapsed 00:00:04.27

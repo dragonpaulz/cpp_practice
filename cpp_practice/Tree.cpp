@@ -22,15 +22,15 @@ static void BinaryTree<Object>::treePractice()
 	std::cout << studentMarks.at("Paul") << std::endl;
 }*/
 
-template<typename Object>
-bool treeChap1(BinaryTree<Object> *checkThisTree)
+
+bool treeChap1(BinaryTree *checkThisTree)
 {
 	if (checkThisTree->root == nullptr) return true;
 	return treeChap1Helper(checkThisTree->root);
 }
 
-template<typename Object>
-bool treeChap1Helper(TreeNode<Object> *subTree)
+
+bool treeChap1Helper(TreeNode *subTree)
 {
 	if (*subTree == nullptr) return true;
 	if (abs(getHeight(root->left) - getHeight(root->right)) > 1) return false;

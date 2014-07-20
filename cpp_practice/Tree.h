@@ -7,14 +7,13 @@ enum colour{ red, black };
 
 
 
-template<typename Object>
 class TreeNode
 {
 protected:
-	Object value;
+	int value;
 
 	// declare friend classes
-	template<typename Object>
+
 	friend class BinaryTree;
 	friend class RBTreeNode;
 	friend class RBBinaryTree;
@@ -23,6 +22,7 @@ public:
 	TreeNode *left;
 	TreeNode *right;
 
+	template<typename Object>
 	TreeNode(Object v)
 	{
 		value = v;
@@ -37,7 +37,7 @@ public:
 		right = nullptr;
 	}
 
-	Object getValue()
+	int getValue()
 	{
 		return value;
 	}
@@ -81,7 +81,7 @@ protected:
 *	My own implementation of the Binary Search Tree.
 * ****************************************************************************/
 
-template<typename Object>
+
 class BinaryTree
 {
 private:
@@ -93,23 +93,23 @@ private:
 	}
 
 public:
-	TreeNode<Object> *root = nullptr;
-	void addValue(Object v)
+	TreeNode *root = nullptr;
+	void addValue(int v)
 	{
 		if (root == nullptr)
 		{
-			root = new TreeNode<Object>(v);
+			root = new TreeNode(v);
 			return;
 		}
 		
-		TreeNode<Object> *currentNode = root;
+		TreeNode *currentNode = root;
 
 		// put a new tree node in the tree.
 		while (currentNode != nullptr)
 		{
 			if (currentNode->value <= v)
 			{
-				if (currenNode->left == nullptr)
+				if (currentNode->left == nullptr)
 				{
 					currentNode->left = new TreeNode(v);
 					break;
@@ -135,13 +135,13 @@ public:
 	*		a linked list containing the contents of a tree in the Breadth
 	*		first search order.
 	* ************************************************************************/
-	std::list<Object> BFSList()
+	/*std::list<int>* BFSList()
 	{
-		std::list<Object> * nodesInOrder = new std::list<Object>;
+		std::list<int> * nodesInOrder = new std::list<int>;
 		if (root != nullptr)
 		{
-			std::list<Object>*::iterator nodesInOrderItr = nodesInOrder.begin();
-			nodesInOrder.push_back(*root);
+			std::list<int>::iterator nodesInOrderItr = nodesInOrder->begin();
+			nodesInOrder->push_back(*root);
 			while (nodesInOrderItr != nodesInOrder.end())
 			{
 				if (nodesInOrder->left != nullptr)
@@ -151,7 +151,7 @@ public:
 			}
 		}
 		return nodesInOrder;
-	}
+	}*/
 
 	static void treePractice();
 };
@@ -159,12 +159,10 @@ public:
 // To write: RBBinaryTree
 
 // declare functions to do in the book
-template<typename Object>
-bool treeChap1(BinaryTree<Object>*);
-template<typename Object>
-bool treeChap1Helper(TreeNode<Object>*);
-template<typename Object>
-int getHeight(TreeNode<Object> *);
+bool treeChap1(BinaryTree*);
+bool treeChap1Helper(TreeNode*);
+int getHeight(TreeNode *);
+
 void treeChap2();
 void treeChap3();
 void treeChap4();
