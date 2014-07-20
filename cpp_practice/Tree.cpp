@@ -32,14 +32,14 @@ bool treeChap1(BinaryTree *checkThisTree)
 
 bool treeChap1Helper(TreeNode *subTree)
 {
-	if (*subTree == nullptr) return true;
-	if (abs(getHeight(root->left) - getHeight(root->right)) > 1) return false;
+	if (subTree == nullptr) return true;
+	if (abs(getHeight(subTree->left) - getHeight(subTree->right)) > 1) return false;
 	return treeChap1Helper(subTree->left) && treeChap1Helper(subTree->right);
 }
 
-template<typename Object>
-int getHeight(TreeNode<Object> * subTree)
+
+int getHeight(TreeNode * subTree)
 {
 	if (subTree == nullptr) return 0;
-	return (max(getHeight(subTree->left)), getHeight(subTree->right)) + 1
+	return (std::max(getHeight(subTree->left), getHeight(subTree->right))) + 1;
 }

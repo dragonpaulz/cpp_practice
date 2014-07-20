@@ -62,6 +62,11 @@
 #include <set>
 #endif
 
+#ifndef STD_ALGORITHM_
+#define STD_ALGORITHM_
+#include <algorithm>
+#endif
+
 // This is a visual studio only variable...
 #ifndef STD_TCHAR_H_
 #define STD_TCHAR_H_

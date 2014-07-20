@@ -105,7 +105,7 @@ int main(int argc, char* argv[])
 
 	case(tree1) :
 	{
-		BinaryTree<int> *paulTree = new BinaryTree<int>;
+		BinaryTree *paulTree = new BinaryTree;
 		paulTree->addValue(3);
 		paulTree->addValue(1);
 		paulTree->addValue(2);
