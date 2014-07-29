@@ -1,4 +1,4 @@
-﻿Build started 19/07/2014 11:03:47 PM.
+﻿Build started 20/07/2014 12:23:04 PM.
      1>Project "D:\Users\dragonpaulz\documents\Cpp_practice_2013\cpp_practice\cpp_practice\cpp_practice.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\cpp_practice.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
@@ -27,4 +27,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.53
+Time Elapsed 00:00:05.05

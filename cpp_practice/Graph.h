@@ -55,6 +55,21 @@ public:
 		return connections.at(nodeNumber);
 	}
 
+
+	// returns the neighbours as a list if preferred
+	std::list<int> getNeighbours(int nodeNumber)
+	{
+		std::list<int> * returnList = new std::list<int>;
+		for (int i = 0; i < connections.at(nodeNumber); i++)
+		{
+			if (connections.at(nodeNumber).at(i))
+			{
+				returnList->push_front(i);
+			}
+		}
+		return returnList;
+	}
+
 	// sets the value for a particular node.
 	void setNodeValue(unsigned int nodeNum, Object value)
 	{
